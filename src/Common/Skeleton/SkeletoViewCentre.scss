@@ -1,0 +1,21 @@
+// @import "../../../Scss/base/colors";
+@import "../../Scss/base/colors";
+
+.viewCentres_skeleton_container{
+    width: 30%;
+.ant-skeleton.ant-skeleton-active{
+    .ant-skeleton-content{
+        .ant-skeleton-title{
+            width: 72% !important;
+            height: 15rem;
+        }
+        .ant-skeleton-paragraph > li {
+            width:70%;
+            height: 2.4rem;
+        }
+        .ant-skeleton-paragraph > li:last-child:not(:first-child):not(:nth-child(2)){
+            height: 2.2rem;
+        }
+     }
+  }
+}

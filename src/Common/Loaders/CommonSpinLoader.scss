@@ -1,0 +1,39 @@
+@import "../../Scss/base/colors";
+
+.Common-spin_container{
+  position:absolute;
+  top:50%;
+  left: 50%;
+    .Common_spin_icon{
+        font-size: 4rem;
+        color: $cg-secondary;
+        .anticon-spin{
+            animation: loadingCircle 1.3s infinite linear;
+        }
+    }
+ }
+
+
+/*********** Common_Loader_container starts from here ************/
+.Common_Loader_Container{
+  position:absolute;
+  top:50%;
+  left: 50%;
+  .Common_Loader_icon{
+    .ant-spin-dot{
+        font-size: 3rem;
+        width: 3rem;
+        height:3rem; 
+        .ant-spin-dot-item {
+            background-color: $cg-secondary;
+            width: 1rem;
+            height: 1rem;
+                 }
+         }
+    .ant-spin-dot-spin{
+    transform: rotate(45deg);
+    animation: antRotate 1.5s infinite linear;
+    }
+  }
+}
+/*********** Common_Loader_container end here ************/

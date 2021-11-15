@@ -1,0 +1,50 @@
+@import "../../Scss/base/colors";
+
+.Pagination-Body-Content {
+  .ant-pagination-item-active {
+    background: $primary;
+    border-color: $primary;
+    border-radius: 50%;
+  }
+  .ant-pagination.mini .ant-pagination-item:not(.ant-pagination-item-active) {
+    border-radius: 50%;
+  }
+  .ant-pagination-item a {
+    color: #222222;
+    &:hover {
+      color: $primary;
+    }
+  }
+  .ant-pagination-item-active a {
+    color: $white;   
+    //   changed here
+     font-family: var(--Book);  
+    &:hover {
+      color: $white;
+    }
+  }
+  .ant-pagination-jump-prev
+    .ant-pagination-item-container
+    .ant-pagination-item-link-icon,
+  .ant-pagination-jump-next
+    .ant-pagination-item-container
+    .ant-pagination-item-link-icon {
+    color: $primary;
+  }
+  .ant-pagination.mini .ant-pagination-prev {
+    margin-right: 1rem;
+  }
+  .ant-pagination.mini .ant-pagination-next {
+    margin-left: 1rem;
+  }
+  .ant-pagination.mini .ant-pagination-prev .ant-pagination-item-link,
+  .ant-pagination.mini .ant-pagination-next .ant-pagination-item-link {
+    background: $white;
+    border-radius: 50%;
+    box-shadow: 0 0.6px 2px 0.25px;
+  }
+  .anticon {
+    vertical-align: -1px;
+    color: #bfbfbf;
+  }
+}

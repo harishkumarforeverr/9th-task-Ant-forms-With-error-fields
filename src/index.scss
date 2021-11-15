@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "./Scss/base/_colors.scss";
+// @import { fonturl } from './Components/Common/Constants/Apiurls';
+body {
+  font-family:CamptonBook, sans-serif;
+}
+
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+$Font-Url:"https://ub-fonts.s3.ap-south-1.amazonaws.com/";
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px, 12/16
+  }
+}
+
+.Error {
+  font-size: 1.2rem;
+  color: #f44336;
+}
+
+/// italic fonts
+@font-face {
+  font-family: CamptonBlackItalic;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonBlack.otf");
+}
+
+@font-face {
+  font-family: CamptonBoldItalic;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonBoldItalic.otf");
+}
+
+@font-face {
+  font-family: CamptonBookItalic;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonBookItalic.otf");
+}
+
+@font-face {
+  font-family: CamptonExtraBoldItalic;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonExtraBoldItalic.otf");
+}
+
+@font-face {
+  font-family: CamptonExtraLightItalic;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonExtraLightItalic.otf");
+}
+
+@font-face {
+  font-family: CamptonLightItalic;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonLightItalic.otf");
+}
+
+@font-face {
+  font-family: CamptonMediumItalic;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonMediumItalic.otf");
+}
+
+@font-face {
+  font-family: CamptonSemiBoldItalic;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonSemiBoldItalic.otf");
+}
+
+@font-face {
+  font-family: CamptonThinItalic;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonThinItalic.otf");
+}
+// bold fonts
+@font-face {
+  font-family: CamptonExtraBold;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonExtraBold.otf");
+}
+
+@font-face {
+  font-family: CamptonSemiBold;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonSemiBold.otf");
+}
+// normals fonts
+@font-face {
+  font-family: CamptonBlack;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonBlack.otf");
+}
+
+@font-face {
+  font-family: CamptonBold;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonBold.otf");
+}
+@font-face {
+  font-family: CamptonBook;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonBook.otf");
+}
+
+// lighther fonts
+@font-face {
+  font-family: CamptonExtraLight;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonExtraLight.otf");
+}
+@font-face {
+  font-family: CamptonLight;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonLight.otf");
+}
+@font-face {
+  font-family: CamptonMedium;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonMedium.otf");
+}
+@font-face {
+  font-family: CamptonThin;
+  src: url("https://ub-fonts.s3.ap-south-1.amazonaws.com/CamptonThin.otf");
+}
+// 9+2+3+4 => 18 fonts but not using 9 fonts files of italies
+:root {
+  //bold
+  --ExtraBold: CamptonExtraBold;
+  --SemiBold: CamptonSemiBold;
+  // normal
+  --Black: CamptonBlack;
+  --Bold: CamptonBold;
+  --Book: CamptonBook;
+  // light
+  --ExtraLight: CamptonExtraLight;
+  --Light: CamptonLight;
+  --Medium: CamptonMedium;
+  --Thin: CamptonThin;
+}
+///// i( ) added these to body becoz CamptonMedium font-family is setting good look for all tags so i added here in 
+/// in the root of body so that all other html tags and ant componennts can inherent these font-family by default so we no need to give explicity 
+/// font-family to any tag in html
+@media only screen and (max-width: 37.5em){ 
+  body{
+    font-family: var(--Medium);
+  }
+}
+@media only screen and (max-width: 56.25em){ 
+  body{
+    font-family: var(--Medium);
+  }
+}

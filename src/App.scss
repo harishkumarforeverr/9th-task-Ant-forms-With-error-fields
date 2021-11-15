@@ -1,0 +1,10 @@
+@import  './Scss/base/_colors';
+
+
+.Common-spin_container{
+    position:absolute;
+    top: 18% !important;
+    .Common_spin_icon{
+        font-size: 8rem;
+    }
+}
